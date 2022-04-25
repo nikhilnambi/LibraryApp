@@ -3,7 +3,11 @@
 const mongoose = require('mongoose');
 
 //Database connection
-mongoose.connect('mongodb://localhost:27017/Library');
+//mongoose.connect('mongodb://localhost:27017/Library');
+
+
+mongoose.connect("mongodb+srv://usernk:usernk@ictak.svswr.mongodb.net/Library?retryWrites=true&w=majority");
+
 
 //schema definition
 const Schema = mongoose.Schema;
