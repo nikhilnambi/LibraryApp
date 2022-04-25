@@ -1,0 +1,37 @@
+body{
+    overflow-x: hidden;
+}
+#logo{
+    margin-left:20px;
+}
+.navbar-nav{
+    margin-left:60%;
+}
+li{
+ padding:0px 10px 0px 20px;
+ font-size:15px;
+ color: aqua;
+}
+#buthover{
+    border-radius: 50px;
+    border-color: rgb(1, 204, 204);
+    background-color: rgb(218, 216, 131); 
+}
+
+li:hover{
+    padding:0px 10px 0px 20px;
+    font-size:20px;
+    color: aqua;
+}
+#buthover:hover{
+    background-color: rgb(255, 187, 0); 
+    border-radius: 50px;
+    border-color: rgb(0, 204, 126);
+}
+.fa{
+    width:50px;
+    height:30px;
+    
+}
+
+
