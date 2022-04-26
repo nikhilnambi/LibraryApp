@@ -51,9 +51,11 @@ function router(admin){
                 admin,
                 title:"Edit Author",
                 editauthor
+               
 
 
             });
+            console.log(editauthor);
         });
     });
   

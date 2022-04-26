@@ -1,6 +1,6 @@
 const express = require("express");
 const booksRouter = express.Router();
-const Bookdata = require("../model/BookData");
+const Bookdata = require("../model/Bookdata");
 
 
 function router(nav){

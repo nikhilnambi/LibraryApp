@@ -16,6 +16,21 @@ function router(nav){
     
 });
     });
+    authorRouter.get("/:id",(req, res)=> {
+  
+        console.log(" coming here");
+        const id = req.params.id;
+        Authordata.findOne({_id:id})
+        .then(function (author) {
+            console.log(author);
+            res.render("author", {
+                nav,
+                title:'Author',
+                author
+            })
+        });
+    });
+   
     return authorRouter;
 }
 

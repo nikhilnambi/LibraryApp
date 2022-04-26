@@ -1,6 +1,7 @@
 const express = require('express');
 const addbookRouter = express.Router();
-const Bookdata = require("../model/BookData");
+const Bookdata = require("../model/Bookdata");
+const multer = require("multer");
 
 
 
@@ -19,16 +20,26 @@ function router(admin){
     
 });
 
-addbookRouter.post('/add',function(req,res) {
+const imageStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./public/images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+});
+
+const upload = multer({
+    storage: imageStorage
+});
+
+
+addbookRouter.post('/add',upload.single("image"),function(req,res) {
     console.log("reached");
-    const crypto = require("crypto");
-
-    const id = crypto.randomBytes(16).toString("hex");
-
-    console.log(id);
+   
 
     var item={
-        _id:id,
+       
         title:req.body.title,
         author:req.body.author,
         genre:req.body.genre,

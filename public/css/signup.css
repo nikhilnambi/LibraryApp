@@ -212,3 +212,12 @@ li:hover{
     border-radius: 50px;
     border-color: rgb(0, 204, 126);
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgba(0, 0, 0, 0.05);;
+  color: rgb(12, 11, 11);
+  text-align: center;
+}

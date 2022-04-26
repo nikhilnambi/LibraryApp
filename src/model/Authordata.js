@@ -3,7 +3,6 @@
 const mongoose = require('mongoose');
 
 //Database connection
-
 //mongoose.connect('mongodb://localhost:27017/Library');
 
 
@@ -14,7 +13,7 @@ mongoose.connect("mongodb+srv://usernk:usernk@ictak.svswr.mongodb.net/Library?re
 const Schema = mongoose.Schema;
 
 const AuthorSchema = new Schema({
-    _id:String,
+   
     name:String,
     image:String,
     Born:String,

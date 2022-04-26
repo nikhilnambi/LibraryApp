@@ -9,6 +9,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/books.css">
+    <style>
+      .img-circle{
+    border-radius: 60px;
+    width:120px;
+    height:120px;
+}
+  </style>
 </head>
 <body>
 
@@ -41,14 +48,14 @@
     <%for(i=0;i<authors.length;i++){%>
         <div class="row row-cols-3"> <!--//row-cols-1-->
           <br>
-          <div class="col-md-2 col-sm-3 text-center">
+          <div class="row-auto row-cols-1 text-center">
             <div>
             <h3><%=authors[i].name%></h3>
             <img alt="img" src="/images/<%=authors[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
           </div>
-            <small>Born on<%=authors[i].Born%></small>
-            <small><%=authors[i].Nationality%></small>
-              <p><%=authors[i].about%></p>
+            <small>Born(<%=authors[i].Born%>)</small><br>
+            <h5><%=authors[i].Nationality%></h5>
+              <p><%=authors[i].about%></p><a href="/library/authors/<%=authors[i]._id%>">Read more</a></a>
             </div>
          
                 

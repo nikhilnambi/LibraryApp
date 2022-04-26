@@ -1,0 +1,82 @@
+body{
+    overflow-x: hidden;
+}
+#logo{
+    margin-left:20px;
+}
+.navbar-nav{
+    margin-left:40%;
+}
+li{
+ padding:0px 10px 0px 20px;
+ font-size:15px;
+ color: aqua;
+}
+#buthover{
+    border-radius: 50px;
+    border-color: rgb(1, 204, 204);
+    background-color: rgb(218, 216, 131); 
+}
+
+li:hover{
+    padding:0px 10px 0px 20px;
+    font-size:20px;
+    color: aqua;
+}
+#buthover:hover{
+    background-color: rgb(255, 187, 0); 
+    border-radius: 50px;
+    border-color: rgb(0, 204, 126);
+}
+.fa{
+    width:50px;
+    height:30px;
+    
+}
+.books{
+    padding-top: 20px;
+}
+.row{
+    margin-left:10px;
+    padding-top: 10px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.05);;
+    color: rgb(12, 11, 11);
+    text-align: center;
+  }
+  .img-circle{
+      border-radius: 60px;
+      width:120px;
+      height:120px;
+  }
+ 
+  .red{
+    background-color: rgb(226, 34, 34);
+    border-radius: 10px;
+    border-color: aliceblue;
+    width:10%;
+    padding-top: 0.2rem;
+    margin-top: 22px;
+    margin-left:14%;
+}
+.editform{
+    margin-left: 32%;
+}
+h2{
+    margin-top: 20px;
+    margin-left: 10%;
+}
+table {
+	border-collapse: collapse;
+}
+td {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+

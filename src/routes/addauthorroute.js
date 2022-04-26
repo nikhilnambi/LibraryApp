@@ -1,6 +1,7 @@
 const express = require('express');
 const addauthorrouter = express.Router();
 const Authordata = require("../model/Authordata");
+const multer = require("multer");
 
 
 
@@ -19,16 +20,26 @@ function router(admin){
     
 });
 
-addauthorrouter.post('/add',function(req,res) {
-    console.log("reached");
-    const crypto = require("crypto");
+const imageStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "./public/images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+});
 
-    const id = crypto.randomBytes(16).toString("hex");
+const upload = multer({
+    storage: imageStorage
+});
 
-    console.log(id);
+addauthorrouter.post('/add',upload.single("image"),function(req,res) {
+    console.log("reached author");
+    
+   
 
     var item={
-        _id:id,
+        
         name:req.body.Name,
         Born:req.body.Born,
         Nationality:req.body.Nationality,

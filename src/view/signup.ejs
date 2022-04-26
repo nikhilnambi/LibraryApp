@@ -46,25 +46,25 @@
         <p class="text-mute">Already A Member? <a href="/login">Log in</a></p>
         <form class="signup-form" action="/signup/adduser" onsubmit="return validate()" method="get">
             <label class="inp">
-              <input type="text" id="uname" name="name"  class="input-text" placeholder="&nbsp;">
+              <input type="text" id="uname" name="name" required pattern="^(\w\w+)\s(\w+)$"  class="input-text" placeholder="&nbsp;">
               <span class="label">Name</span>
               <span class="input-icon"><i class="fa fa-user icon"></i></span>
             </label>
          
           <label class="inp">
-            <input type="email" id="email" name="userid" class="input-text" placeholder="&nbsp;" autocomplete="email">
+            <input type="email" id="email" required name="userid" class="input-text" placeholder="&nbsp;" autocomplete="email">
             <span class="label">Email</span>
             <small id="emailmsg"></small>
           </label>
          
           <label class="inp">
-            <input type="password" class="input-text" name="pwdid" placeholder="&nbsp;" id="password" onkeyup="">
+            <input type="password" class="input-text" required name="pwdid" placeholder="&nbsp;" id="password" onkeyup="">
             <span class="label">Password</span>
             <small id="pMsg"></small>
           </label>
           
           <label class="inp">
-            <input type="password" class="input-text" placeholder="&nbsp;" id="repwd">
+            <input type="password" class="input-text" required placeholder="&nbsp;" id="repwd">
             <span class="label">Re-type Password</span>
             <small id="pwdMsg"></small>
           </label>

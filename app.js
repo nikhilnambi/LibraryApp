@@ -64,7 +64,7 @@ app.get('/',function(req,res){
     })
 })
 
-const PORT = process.env.PORT || 2200;
+const PORT = process.env.PORT || 2000;
     app.listen(PORT, () => {
     console.log(`running on http://localhost:${PORT}`);
     });
